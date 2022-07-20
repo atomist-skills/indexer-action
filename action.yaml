@@ -17,11 +17,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://atomist/docker-registry-broker:latest
-  entrypoint:
-    - "node"
-    - "/usr/src/app/index.js"
-
+  image: Dockerfile
   args:
     - index-image
     - local
