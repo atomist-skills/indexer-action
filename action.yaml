@@ -17,14 +17,13 @@ inputs:
     required: true
 runs:
   using: docker
-  #image: docker://atomist/docker-registry-broker:latest@sha256:8a0e56b301d7882388b367cba690c5b2d87bc03b7834f72c72d67b804f0b9144
-  image: Dockerfile
-  #args:
-  #  - index-image
-  #  - local
-  #  - --workspace
-  #  - ${{ inputs.workspace }}
-  #  - --api-key
-  #  - ${{ inputs.api-key }}
-  #  - --image 
-  #  - ${{ inputs.image }}
+  image: docker://atomist/docker-registry-broker:latest@sha256:7d0f25bef38182253f0387e44e950b0a0a492b615327ae57032db3978267fb72
+  args:
+    - index-image
+    - local
+    - --workspace
+    - ${{ inputs.workspace }}
+    - --api-key
+    - ${{ inputs.api-key }}
+    - --image 
+    - ${{ inputs.image }}
