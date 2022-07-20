@@ -1,6 +1,6 @@
 # Atomist Image Indexer
 
-This action prints indexes a locally build Docker image
+This action indexes a locally built Docker image and uploads the SBOM to Atomist.
 
 ## Inputs
 
