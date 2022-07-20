@@ -1,2 +1,2 @@
-FROM atomist/atomist/docker-registry-broker:latest
+FROM atomist/docker-registry-broker:latest
 
