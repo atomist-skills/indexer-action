@@ -18,8 +18,10 @@ This action prints indexes a locally build Docker image
 
 ## Example usage
 
+```yaml
 uses: atomist-skills/image-indexer
 with:
   image: ${{ steps.meta.outputs.tags }}
   api-key: ${{ secrets.ATOMIST_API_KEY }}
   workspace: ${{ secrets.ATOMIST_WORKSPACE }}
+```  
