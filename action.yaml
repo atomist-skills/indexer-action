@@ -17,7 +17,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://atomist/docker-registry-broker:latest@sha256:7d0f25bef38182253f0387e44e950b0a0a492b615327ae57032db3978267fb72
+  image: docker://atomist/docker-registry-broker:latest@sha256:9615ea5e366400c23ac9d0b08c919a92696ee7e7ad93fbd6ad3f1f446557cc00
   args:
     - index-image
     - local
