@@ -1,5 +1,10 @@
-name: 'Atomist Image Indexer'
-description: 'Index a local Docker image'
+name: Index Docker images
+description: Create a package SBOM for Docker images using Atomist
+author: docker
+branding:
+  icon: anchor
+  color: blue
+
 inputs:
   image: 
     description: 'Image'
