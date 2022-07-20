@@ -1,1 +1,5 @@
-FROM atomist/docker-registry-broker:latest@sha256:8a0e56b301d7882388b367cba690c5b2d87bc03b7834f72c72d67b804f0b9144
+FROM atomist/docker-registry-broker:latest
+
+ENV ATOMIST_LOG=debug
+
+ENTRYPOINT [ "docker", "images" ]
