@@ -19,7 +19,10 @@ This action prints indexes a locally build Docker image
 ## Example usage
 
 ```yaml
-uses: atomist-skills/index-image-action
+name: Create SBOM
+if: ${{ github.event_name == 'pull_request' }}
+id: sbom
+uses: atomist-skills/index-image-action@main
 with:
   image: ${{ steps.meta.outputs.tags }}
   api-key: ${{ secrets.ATOMIST_API_KEY }}
