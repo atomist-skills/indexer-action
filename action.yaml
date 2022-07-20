@@ -1,0 +1,24 @@
+name: 'Atomist Image Indexer'
+description: 'Index a local Docker image'
+inputs:
+  image: 
+    description: 'Image'
+    required: true
+  api-key: 
+    description: 'API key'
+    required: true
+  workspace: 
+    description: 'Workspace ID'
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - index-image
+    - local
+    - --workspace
+    - ${{ inputs.workspace }}
+    - --api-key
+    - ${{ inputs.api-key }}
+    - --image 
+    - ${{ inputs.image }}
