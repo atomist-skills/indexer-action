@@ -19,7 +19,8 @@ This action indexes a locally built Docker image and uploads the SBOM to Atomist
 ## Example usage
 
 ```yaml
-name: Create SBOM
+# Extract SBOMs for images that are not getting pushed to the registry
+name: Extract and upload SBOM
 if: ${{ github.event_name == 'pull_request' }}
 id: sbom
 uses: atomist-skills/index-image-action@main
