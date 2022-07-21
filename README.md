@@ -1,6 +1,7 @@
 # Atomist Image Indexer
 
-This action indexes a locally built Docker image and uploads the SBOM to Atomist.
+This action indexes a locally built Docker image and uploads the SBOM to
+Atomist.
 
 ## Inputs
 
@@ -25,7 +26,7 @@ if: ${{ github.event_name == 'pull_request' }}
 id: sbom
 uses: atomist-skills/index-image-action@main
 with:
-  image: ${{ steps.meta.outputs.tags }}
-  api-key: ${{ secrets.ATOMIST_API_KEY }}
-  workspace: ${{ secrets.ATOMIST_WORKSPACE }}
-```  
+    image: ${{ steps.meta.outputs.tags }}
+    api-key: ${{ secrets.ATOMIST_API_KEY }}
+    workspace: ${{ secrets.ATOMIST_WORKSPACE }}
+```

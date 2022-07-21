@@ -6,14 +6,14 @@ branding:
   color: blue
 
 inputs:
-  image: 
-    description: 'Image'
+  image:
+    description: "Image"
     required: true
-  api-key: 
-    description: 'API key'
+  api-key:
+    description: "API key"
     required: true
-  workspace: 
-    description: 'Workspace ID'
+  workspace:
+    description: "Workspace ID"
     required: true
 runs:
   using: docker
@@ -25,5 +25,5 @@ runs:
     - ${{ inputs.workspace }}
     - --api-key
     - ${{ inputs.api-key }}
-    - --image 
+    - --image
     - ${{ inputs.image }}
