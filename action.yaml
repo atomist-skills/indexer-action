@@ -17,13 +17,12 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://atomist/docker-registry-broker:latest@sha256:9537cd4cb48ea97690bb908c86c2febe1eea17dd25ce12af7b3328c3b33edfbc
+  image: docker://ghcr.io/cdupuis/index-cli-plugin@sha256:a90e640110fc637f9207507d8449144fe131efaacd3aad0aa4983d3e9762507e
+  env:
+    ATOMIST_API_KEY: ${{ inputs.api-key }}
+    ATOMIST_WORKSPACE: ${{ inputs.workspace }}
   args:
-    - index-image
-    - local
-    - --workspace
-    - ${{ inputs.workspace }}
-    - --api-key
-    - ${{ inputs.api-key }}
+    - index
+    - upload
     - --image 
     - ${{ inputs.image }}
