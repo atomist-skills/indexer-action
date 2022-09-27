@@ -17,7 +17,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://ghcr.io/cdupuis/index-cli-plugin@sha256:a90e640110fc637f9207507d8449144fe131efaacd3aad0aa4983d3e9762507e
+  image: docker://ghcr.io/cdupuis/index-cli-plugin@sha256:3166106bbcc532adc075b85ac2eaf1fcaf568528d108a96587e307095f3e5540
   env:
     ATOMIST_API_KEY: ${{ inputs.api-key }}
     ATOMIST_WORKSPACE: ${{ inputs.workspace }}
